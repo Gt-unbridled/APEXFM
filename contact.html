@@ -92,11 +92,19 @@
   <div class="wrap two-col">
     <div>
       <h2>Send a Message</h2>
-      <form action="https://formsubmit.co/ajax/info@apexfmpropertyventures.com" method="POST" id="contact-form">
+      <form action="https://formsubmit.co/ajax/abodunrintundey@gmail.com" method="POST" id="contact-form">
         <div class="form-grid">
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-          <input type="hidden" name="_subject" value="New enquiry from apexfmpropertyventures.com">
+          <input type="hidden" name="_subject" value="New Property Enquiry - Apex FM & Property Ventures">
           <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_replyto" value="">
+          <script>
+            // Populate reply-to with the visitor's own email so replying goes straight to them
+            document.currentScript.closest('form').addEventListener('submit', function(){
+              this.querySelector('input[name="_replyto"]').value = this.querySelector('#email').value;
+            });
+          </script>
           <div>
             <label for="name">Full Name</label>
             <input id="name" name="name" type="text" placeholder="Your name" required>
@@ -130,7 +138,7 @@
         <li><span class="mark">Address</span> <a href="https://www.google.com/maps/search/?api=1&query=4+Prince+Samuel+Adedoyin+Street+Ikate+Lekki+Lagos" target="_blank" rel="noopener">4, Prince Samuel Adedoyin Street, Ikate, Lekki, Lagos.</a></li>
       </ul>
       <div class="notice" style="margin-top:32px;">
-        <strong>Note:</strong> This form sends directly to info@apexfmpropertyventures.com via FormSubmit. The first submission after going live will trigger a one-time confirmation email - click the link in it to activate the form.
+        <strong>Note:</strong> This form sends directly to your inbox via FormSubmit. The first submission after going live will trigger a one-time confirmation email - click the link in it to activate the form.
       </div>
     </div>
   </div>
